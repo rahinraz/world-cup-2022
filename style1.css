@@ -17,37 +17,43 @@ body{
     align-items: center;
     position: absolute;
     background-color:#161616;
-    width:85%;
-    height:600px;;
-    left:5%;
-    right:5%;
+    margin-top: 30px;
+    padding-top:25px;
+    width:90%;
+    height:100vh;
+    margin-left: 5%;
     border-radius:10px ;  
-    margin-top: 50px;
     animation: anim2 2s cubic-bezier(0.19, 1, 0.22, 1) 2.5s  both;
 }
 #screen-load{
+    margin-top: 30px;
+    padding-top:25px;
     width:500px;
     height:100px;
+    margin-left:5%;
     background-color:#161616;
     overflow: hidden;
 }
 #screen-load .element{
+    
     width: 100%;
     height: 100%;
     background-color: #161616;
     display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 #screen-load .element h1{
     
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 700;
     
 }
 /* animation  */
 #screen-load .element:nth-child(1){
-    animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 0.4s  both;
+    animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s  both;
 
 }
 #screen-load .element:nth-child(2){
@@ -55,7 +61,7 @@ body{
 
 }
 #screen-load .element:nth-child(3){
-    animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 2s  both;
+    animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 2Ss  both;
 
 }
 @keyframes anim{
@@ -78,41 +84,41 @@ main{
 }
 
 /* header area style  */
-
-.header-section{
-    background-color:#161616;
-    width:85%;
-    height:600px;;
-    left:5%;
-    right:5%;
-    border-radius:10px ;  
-    margin-top: 50px;
-}
 .header-area{
+    border-radius: 20px;
+    background-color: #161616;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    margin-top: 30px;
+    padding-top:25px;
+    width:90%;
+    margin-left:5%;
     
     
-    color: white;
-    display: flex;
 }
 .header{
-    width: 50%;
+    margin: 5vw;
     
-    margin-left:100px;
 }
 
 .header h1{
     font-size: 70px;
     font-weight: 700;
+    line-height: 65px;
+    color: white;
     
    
 }
 .header p{
     font-size: 16px;
     font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
 }
 .header .button{
     padding:16px 25px;
-    background-color: #DD0000;
+    background-color: #d63031;
     border-radius: 5px;
     border:0px;
     color: white;
@@ -120,23 +126,24 @@ main{
     text-decoration: none;
    
 }
+.header .button:hover{
+    background-color: #6c5ce7;
+}
 
 /* image area style  */
 .img-area{
-    width: 45%;
-    margin-bottom: 0%;
-    margin-left:5%;
+    
+    margin: 0 5vw;
+    margin-bottom: 0;
+    bottom:0;
+    padding: 0;
 }
 .img-area img{
-    position:relative;
-   height: 100%;
-   right: 15%;
-   top:50px;
-   bottom: 0%;
-   z-index: 1;
+    width: 100%;
+    margin-bottom:0;
+    bottom: 0;
 
 }
-
 
 
 
@@ -170,6 +177,10 @@ main{
     font-weight: 400;
     text-align: center;
     margin: 20px;
+}
+.menu-detail a:hover{
+    background-color: #6c5ce7;
+    color: white;
 }
 .menu-detail .unique-blog{
     background-color: #DD0000;
@@ -223,9 +234,45 @@ main{
 }
 
 
+/* .match-details  */
+.match-highlights{
+    display: flex;
+    margin-bottom: 30px;
+    
+}
+.match-highlights a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:500;
+    padding: 10px 20px;
+    background-color: #636e72;
+    border-radius:15px;
+    color:white;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.match-highlights a:hover{
+    background-color: #a29bfe;
+}
+
+.match-highlights  .match-color{
+    background-color: #d63031;
+}
+/* video style 
+------------------- */
+.highlights-video{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.highlights-video iframe{
+    width:80%;
+    margin-left:5%;
+    border-radius: 10px;
+}
+
+
 /* footer area style 
 ----------- */
-
 .last-section{
     background-color: #161616;
     margin-bottom:0px;
@@ -247,6 +294,9 @@ main{
 .footer-info{
     display: flex;
     justify-content: center;
+    margin-left: 15%;
+    margin-right:15%;
+    padding:0% 10%;
     
 }
 .footer-info p{
@@ -254,12 +304,13 @@ main{
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
-    margin-left: 25px;
+    margin-left:20px;
     margin-top:30px;
     cursor: pointer;
 }
 .footer-logo{
-    margin-left:560px;
+    display: flex;
+    justify-content: center;
     padding-bottom: 30px;
 }
 .footer-logo .fa-brands{
@@ -274,4 +325,41 @@ main{
     background-color: white;
     border-radius: 10px;
     
+}
+
+/* SCREEN BREAKPOINT  */
+@media only screen and (max-width:550px) {
+    
+    .header-area{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        
+        width: 85%;
+        height:100%;
+    }
+    .header h1{
+        font-size:40px;
+    }
+    .header p{
+        font-size:14px;
+        font-size: 300;
+    }
+    .middle-section{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top:100px;
+    }
+    .upcoming-matches{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+     .footer-info{
+        display:grid;
+        grid-template-columns: repeat(1,fr);
+        padding-bottom: 30px;
+        justify-content: center;
+        align-items:center ;
+    }
 }
