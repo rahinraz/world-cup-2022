@@ -164,9 +164,9 @@ main{
     width:312px;
     
     margin-bottom: 100px;
-    display:grid;
-  grid-template-columns: 1fr;
-  border-radius: 10px;
+   display:grid;
+   grid-template-columns: repeat(1,1fr);
+   border-radius: 10px;
 }
 .menu-details a{
     border-radius: 10px;
@@ -328,47 +328,189 @@ main{
 }
 
 /* SCREEN BREAKPOINT  */
-@media only screen and (max-width:550px) {
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
     
     .header-area{
-        color: white;
-        display: flex;
-        flex-direction: column;
-        
-        width: 85%;
-        height:100%;
-    }
-    .header h1{
-        font-size:40px;
-    }
-    .header p{
-        font-size:14px;
-        font-size: 300;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
     .match-details{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-top:100px;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
     }
     .blogs{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+
     }
-    .highlights-video{
+    .highlights-video {
         display: grid;
         grid-template-columns: repeat(1,1fr);
-    
+        
     }
     .highlights-video iframe{
-        margin-bottom: 30px;
+        margin-bottom:30px;
     }
-     .footer-info{
+    .footer-info{
         display:grid;
         grid-template-columns: repeat(1,fr);
         padding-bottom: 30px;
         justify-content: center;
         align-items:center ;
     }
-
+    
 }
+  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    
+    .header-area{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .match-details{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+.highlights-video {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom: 30px;
+}
+.highlights-video iframe{
+    margin-bottom:30px;
+}
+.footer-info{
+    display:grid;
+    grid-template-columns: repeat(1,fr);
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items:center ;
+}
+.menu-details{
+    background-color: #161616;
+    width:60vw;
+    
+    margin-bottom: 100px;
+   display:grid;
+   grid-template-columns: repeat(3,1fr);
+   border-radius: 10px;
+}
+.menu-details a{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+ /* Media Query for Tablets Ipads portrait mode */
+ @media (min-width: 768px) and (max-width: 1024px){
+    
+    .header-area{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .match-details{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+.highlights-video {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 30px;
+}
+.highlights-video iframe{
+    margin-bottom:30px;
+}
+.footer-info{
+    display:flex;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items:center ;
+}
+.menu-details{
+    background-color: #161616;
+    width:50vw;
+    
+    margin-bottom: 100px;
+   display:grid;
+   grid-template-columns: repeat(3,1fr);
+   border-radius: 10px;
+}
+.menu-details a{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+    
+    .header-area{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .match-details{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+.highlights-video {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 30px;
+}
+.highlights-video iframe{
+    margin-bottom:30px;
+}
+.footer-info{
+    display:flex;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items:center ;
+}
+.menu-details{
+    background-color: #161616;
+    width:50vw;
+    
+    margin-bottom: 100px;
+   display:grid;
+   grid-template-columns: repeat(3,1fr);
+   border-radius: 10px;
+}
+.menu-details a{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+  
+    
